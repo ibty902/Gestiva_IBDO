@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestiva_IBDO Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/Dashboard.css' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <!-- LOGO -->
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <div class="logo-text">
+            <h2>Gestiva_IBDO</h2>
+            <p>Business Dashboard</p>
+        </div>
+
+    </div>
+
+    <!-- MENU -->
+    <ul class="menu">
+
+        <li class="active">
+            <a href="#">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+           <a href="{% url 'clients' %}" class="btn-clients">
+    Clients
+</a>
+   
+        
+            
+        </li>
+
+        <li>
+        <a href="{% url 'articles' %}" class="btn_clients"> 
+            Articles
+        </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-file-signature"></i>
+                <span>Devis</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>Factures</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Commandes</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Livraisons</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Paiements</span>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+        <div class="search-box">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Rechercher...">
+        </div>
+
+        <div class="top-icons">
+
+            <div class="notif">
+                <i class="fa fa-bell"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TITLE -->
+    <div class="title-section">
+        <h1>Dashboard</h1>
+        <p>Bienvenue dans votre espace de gestion professionnelle.</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+        <div class="card blue">
+            <div>
+                <h3>Total Clients</h3>
+                <h1>245</h1>
+                <p>+12% ce mois</p>
+            </div>
+
+            <i class="fa-solid fa-users"></i>
+        </div>
+
+        <div class="card purple">
+            <div>
+                <h3>Produits</h3>
+                <h1>580</h1>
+                <p>+8% ce mois</p>
+            </div>
+
+            <i class="fa-solid fa-box"></i>
+        </div>
+
+        <div class="card orange">
+            <div>
+                <h3>Commandes</h3>
+                <h1>120</h1>
+                <p>+20% ce mois</p>
+            </div>
+
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <div class="card green">
+            <div>
+                <h3>Revenus</h3>
+                <h1>45K DH</h1>
+                <p>+18% ce mois</p>
+            </div>
+
+            <i class="fa-solid fa-wallet"></i>
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-section">
+
+        <div class="table-header">
+            <h2>Dernières Factures</h2>
+            <button>Voir Tout</button>
+        </div>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Client</th>
+                    <th>Facture</th>
+                    <th>Montant</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Ahmed Benali</td>
+                    <td>#FAC-001</td>
+                    <td>2500 DH</td>
+                    <td><span class="status paid">Payée</span></td>
+                </tr>
+
+                <tr>
+                    <td>Sara El Idrissi</td>
+                    <td>#FAC-002</td>
+                    <td>1800 DH</td>
+                    <td><span class="status pending">En attente</span></td>
+                </tr>
+
+                <tr>
+                    <td>Youssef Karim</td>
+                    <td>#FAC-003</td>
+                    <td>3200 DH</td>
+                    <td><span class="status paid">Payée</span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/articles.css' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>📦 Articles</h1>
+
+        <!-- BUTTON LINK (Django URL) -->
+        <a href="{% url 'articles' %}" class="btn-add">
+            <i class="fa fa-plus"></i> Ajouter Article
+        </a>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        {% for article in articles %}
+
+        <div class="card">
+
+            <!-- TITLE -->
+            <div class="card-header">
+                <h3>{{ article.titre }}</h3>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="card-body">
+                <p>{{ article.contenu }}</p>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="card-footer">
+
+                <span class="price">{{ article.prix }} DH</span>
+
+                <div class="actions">
+                    <a href="#" class="edit" title="Modifier">
+                        <i class="fa fa-pen"></i>
+                    </a>
+
+                    <a href="#" class="delete" title="Supprimer">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+        <p>Aucun article trouvé.</p>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

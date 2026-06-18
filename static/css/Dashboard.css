@@ -1,0 +1,368 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body{
+    background:#f1f5f9;
+    display:flex;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar{
+    width:260px;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+
+    padding:18px;
+
+    background:linear-gradient(180deg,#0f172a,#111827);
+    box-shadow:5px 0 25px rgba(0,0,0,0.15);
+
+    overflow-y:auto;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:12px 16px;
+    margin-bottom:30px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    cursor:pointer;
+    transition:0.3s ease;
+
+    overflow:hidden;
+}
+
+.logo:hover{
+    transform:translateY(-3px);
+    background:rgba(255,255,255,0.08);
+}
+
+.logo img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    border-radius:10px;
+    background:white;
+    padding:3px;
+}
+
+.logo span{
+    font-size:18px;
+    font-weight:700;
+    color:white;
+}
+
+/* =========================
+   MENU
+========================= */
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:10px;
+}
+
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 16px;
+
+    color:#cbd5e1;
+    text-decoration:none;
+
+    border-radius:14px;
+
+    transition:0.3s;
+    font-size:15px;
+}
+
+.menu li a i{
+    font-size:18px;
+}
+
+.menu li a:hover{
+    background:rgba(255,255,255,0.08);
+    color:white;
+    transform:translateX(4px);
+}
+
+.menu li.active a{
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+    color:white;
+}
+
+/* =========================
+   MAIN
+========================= */
+.main{
+    margin-left:260px;
+    width:100%;
+    padding:25px;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+/* SEARCH */
+.search-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:white;
+    padding:12px 16px;
+
+    border-radius:14px;
+    width:350px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+.search-box i{
+    color:#64748b;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:14px;
+}
+
+/* TOP ICONS */
+.top-icons{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* NOTIF */
+.notif{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    background:white;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    cursor:pointer;
+}
+
+/* PROFILE */
+.profile img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+
+    border:2px solid white;
+}
+
+/* =========================
+   TITLE
+========================= */
+.title-section h1{
+    font-size:32px;
+    color:#0f172a;
+}
+
+.title-section p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.cards{
+    margin-top:25px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    padding:25px;
+    border-radius:20px;
+
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    transition:0.3s ease;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card i{
+    font-size:42px;
+    opacity:0.25;
+}
+
+.card h1{
+    font-size:30px;
+}
+
+.card h3{
+    font-size:15px;
+}
+
+.card p{
+    font-size:13px;
+    margin-top:5px;
+}
+
+/* COLORS */
+.blue{background:linear-gradient(135deg,#3b82f6,#2563eb);}
+.purple{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
+.orange{background:linear-gradient(135deg,#f59e0b,#ea580c);}
+.green{background:linear-gradient(135deg,#10b981,#059669);}
+
+/* =========================
+   TABLE
+========================= */
+.table-section{
+    margin-top:35px;
+    background:white;
+
+    padding:20px;
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.table-header button{
+    background:#2563eb;
+    color:white;
+
+    padding:10px 16px;
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.table-header button:hover{
+    background:#1d4ed8;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    text-align:left;
+    padding:14px;
+    color:#64748b;
+    font-size:13px;
+}
+
+table td{
+    padding:14px;
+    border-top:1px solid #e2e8f0;
+}
+
+/* STATUS */
+.status{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.paid{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.pending{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3b82f6;
+    border-radius:10px;
+}
+.btn-clients{
+    display:inline-block;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-clients:hover{
+    background:#1d4ed8;
+}
